@@ -81,7 +81,8 @@ static HKAppDataManager* _sharedInstance;
 }
 - (void)getCreditsImagesWithDelegate:(id<HKAppRequestConfigInfoDelegate>)delegate;
 {
-  
+  NSString* resourcePath = RKPathAppendQueryParams(@"4fdb0793b9935e3ef3000015", [NSDictionary dictionaryWithObject:@"1" forKey:@"per_page"]);
+  [[RKObjectManager sharedManager] loadObjectsAtResourcePath:resourcePath delegate:self];
 }
 
 #pragma mark RKObjectLoaderDelegate methods

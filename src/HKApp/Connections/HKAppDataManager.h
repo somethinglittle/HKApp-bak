@@ -17,9 +17,9 @@
 
 // Methods
 
+- (void)requestAllAttractionsWithDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 - (void)requestSpotsForAttractionID:(NSString*)identifier withDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 - (void)requestMapForAttractionID:(NSString*)identifier withDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
-- (void)requestAllAttractionsWithDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 
 - (void)requestInfoForSpotID:(NSString*)identifier withDelegate:(id<HKAppRequestBySpotDelegate>)delegate;
 - (void)requestImageForSpotID:(NSString*)identifier withDelegate:(id<HKAppRequestBySpotDelegate>)delegate;
