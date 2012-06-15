@@ -13,6 +13,8 @@
 
 @interface HKAppAppDelegate : UIResponder <UIApplicationDelegate>
 
+#pragma mark - Generated Template
+
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -23,5 +25,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) UINavigationController *navigationController;
+
 
 @end

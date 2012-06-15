@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		AF334E86158A2B77005028DA /* libStorageRoomKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF334E7F158A2B32005028DA /* libStorageRoomKit.a */; };
 		AF334EC4158A2D24005028DA /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF334EBB158A2D1C005028DA /* libRestKit.a */; };
+		AF7E15DA158B1B4900D04D4C /* HKApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15D4158B1B4900D04D4C /* HKApp.xcdatamodeld */; };
+		AF7E15DB158B1B4900D04D4C /* HKAppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15D7158B1B4900D04D4C /* HKAppDetailViewController.m */; };
+		AF7E15DC158B1B4900D04D4C /* HKAppMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15D9158B1B4900D04D4C /* HKAppMasterViewController.m */; };
+		AF7E15F4158B277600D04D4C /* HKAppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15EE158B277600D04D4C /* HKAppConstants.m */; };
+		AF7E15F5158B277600D04D4C /* HKAppDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15F3158B277600D04D4C /* HKAppDataManager.m */; };
 		AF81CE35158A05A90078BFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF81CE34158A05A90078BFC3 /* UIKit.framework */; };
 		AF81CE37158A05A90078BFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF81CE36158A05A90078BFC3 /* Foundation.framework */; };
 		AF81CE39158A05A90078BFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF81CE38158A05A90078BFC3 /* CoreGraphics.framework */; };
@@ -16,11 +21,6 @@
 		AF81CE41158A05A90078BFC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF81CE3F158A05A90078BFC3 /* InfoPlist.strings */; };
 		AF81CE43158A05A90078BFC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF81CE42158A05A90078BFC3 /* main.m */; };
 		AF81CE47158A05A90078BFC3 /* HKAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF81CE46158A05A90078BFC3 /* HKAppAppDelegate.m */; };
-		AF81CE4A158A05A90078BFC3 /* HKApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF81CE48158A05A90078BFC3 /* HKApp.xcdatamodeld */; };
-		AF81CE4D158A05A90078BFC3 /* HKAppMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF81CE4C158A05A90078BFC3 /* HKAppMasterViewController.m */; };
-		AF81CE50158A05A90078BFC3 /* HKAppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF81CE4F158A05A90078BFC3 /* HKAppDetailViewController.m */; };
-		AF81CE53158A05A90078BFC3 /* HKAppMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF81CE51158A05A90078BFC3 /* HKAppMasterViewController.xib */; };
-		AF81CE56158A05A90078BFC3 /* HKAppDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF81CE54158A05A90078BFC3 /* HKAppDetailViewController.xib */; };
 		AFC3C396158A1E360086C8CC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AFC3C388158A1E360086C8CC /* LICENSE */; };
 		AFC3C397158A1E360086C8CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AFC3C389158A1E360086C8CC /* README.md */; };
 		AFC3C398158A1E360086C8CC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC3C38B158A1E360086C8CC /* SDImageCache.m */; };
@@ -36,13 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF24F025158A2D3F006551AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF334EB3158A2D1C005028DA /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 259C301615128079003066A2;
-			remoteInfo = RestKitResources;
-		};
 		AF334E7E158A2B32005028DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF334E74158A2B32005028DA /* StorageRoomKit.xcodeproj */;
@@ -111,6 +104,16 @@
 /* Begin PBXFileReference section */
 		AF334E74158A2B32005028DA /* StorageRoomKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StorageRoomKit.xcodeproj; path = Vendors/StorageRoomKit/StorageRoomKit.xcodeproj; sourceTree = "<group>"; };
 		AF334EB3158A2D1C005028DA /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendors/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		AF7E15D5158B1B4900D04D4C /* HKApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HKApp.xcdatamodel; sourceTree = "<group>"; };
+		AF7E15D6158B1B4900D04D4C /* HKAppDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAppDetailViewController.h; sourceTree = "<group>"; };
+		AF7E15D7158B1B4900D04D4C /* HKAppDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAppDetailViewController.m; sourceTree = "<group>"; };
+		AF7E15D8158B1B4900D04D4C /* HKAppMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAppMasterViewController.h; sourceTree = "<group>"; };
+		AF7E15D9158B1B4900D04D4C /* HKAppMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAppMasterViewController.m; sourceTree = "<group>"; };
+		AF7E15ED158B277600D04D4C /* HKAppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAppConstants.h; sourceTree = "<group>"; };
+		AF7E15EE158B277600D04D4C /* HKAppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAppConstants.m; sourceTree = "<group>"; };
+		AF7E15F2158B277600D04D4C /* HKAppDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAppDataManager.h; sourceTree = "<group>"; };
+		AF7E15F3158B277600D04D4C /* HKAppDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAppDataManager.m; sourceTree = "<group>"; };
+		AF7E15F6158B27BF00D04D4C /* HKAppDataRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAppDataRequestDelegate.h; sourceTree = "<group>"; };
 		AF81CE30158A05A90078BFC3 /* HKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF81CE34158A05A90078BFC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF81CE36158A05A90078BFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,13 +125,6 @@
 		AF81CE44158A05A90078BFC3 /* HKApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HKApp-Prefix.pch"; sourceTree = "<group>"; };
 		AF81CE45158A05A90078BFC3 /* HKAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKAppAppDelegate.h; sourceTree = "<group>"; };
 		AF81CE46158A05A90078BFC3 /* HKAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKAppAppDelegate.m; sourceTree = "<group>"; };
-		AF81CE49158A05A90078BFC3 /* HKApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HKApp.xcdatamodel; sourceTree = "<group>"; };
-		AF81CE4B158A05A90078BFC3 /* HKAppMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKAppMasterViewController.h; sourceTree = "<group>"; };
-		AF81CE4C158A05A90078BFC3 /* HKAppMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKAppMasterViewController.m; sourceTree = "<group>"; };
-		AF81CE4E158A05A90078BFC3 /* HKAppDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKAppDetailViewController.h; sourceTree = "<group>"; };
-		AF81CE4F158A05A90078BFC3 /* HKAppDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKAppDetailViewController.m; sourceTree = "<group>"; };
-		AF81CE52158A05A90078BFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HKAppMasterViewController.xib; sourceTree = "<group>"; };
-		AF81CE55158A05A90078BFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HKAppDetailViewController.xib; sourceTree = "<group>"; };
 		AFC3C388158A1E360086C8CC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AFC3C389158A1E360086C8CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AFC3C38A158A1E360086C8CC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -191,9 +187,63 @@
 				AF334EBD158A2D1C005028DA /* RestKitTests.octest */,
 				AF334EBF158A2D1C005028DA /* RestKit.framework */,
 				AF334EC1158A2D1C005028DA /* RestKitFrameworkTests.octest */,
-				AF24F026158A2D3F006551AC /* RestKitResources.bundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AF7E15D3158B1B4900D04D4C /* CoreDataTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E15D4158B1B4900D04D4C /* HKApp.xcdatamodeld */,
+				AF7E15D6158B1B4900D04D4C /* HKAppDetailViewController.h */,
+				AF7E15D7158B1B4900D04D4C /* HKAppDetailViewController.m */,
+				AF7E15D8158B1B4900D04D4C /* HKAppMasterViewController.h */,
+				AF7E15D9158B1B4900D04D4C /* HKAppMasterViewController.m */,
+			);
+			path = CoreDataTemplates;
+			sourceTree = "<group>";
+		};
+		AF7E15EB158B277600D04D4C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E15EC158B277600D04D4C /* Constants */,
+				AF7E15EF158B277600D04D4C /* Delegates */,
+				AF7E15F0158B277600D04D4C /* Protocols */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		AF7E15EC158B277600D04D4C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E15ED158B277600D04D4C /* HKAppConstants.h */,
+				AF7E15EE158B277600D04D4C /* HKAppConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF7E15EF158B277600D04D4C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E15F6158B27BF00D04D4C /* HKAppDataRequestDelegate.h */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AF7E15F0158B277600D04D4C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AF7E15F1158B277600D04D4C /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E15F2158B277600D04D4C /* HKAppDataManager.h */,
+				AF7E15F3158B277600D04D4C /* HKAppDataManager.m */,
+			);
+			path = Connections;
 			sourceTree = "<group>";
 		};
 		AF81CE25158A05A90078BFC3 = {
@@ -236,13 +286,9 @@
 			children = (
 				AF81CE45158A05A90078BFC3 /* HKAppAppDelegate.h */,
 				AF81CE46158A05A90078BFC3 /* HKAppAppDelegate.m */,
-				AF81CE4B158A05A90078BFC3 /* HKAppMasterViewController.h */,
-				AF81CE4C158A05A90078BFC3 /* HKAppMasterViewController.m */,
-				AF81CE4E158A05A90078BFC3 /* HKAppDetailViewController.h */,
-				AF81CE4F158A05A90078BFC3 /* HKAppDetailViewController.m */,
-				AF81CE51158A05A90078BFC3 /* HKAppMasterViewController.xib */,
-				AF81CE54158A05A90078BFC3 /* HKAppDetailViewController.xib */,
-				AF81CE48158A05A90078BFC3 /* HKApp.xcdatamodeld */,
+				AF7E15EB158B277600D04D4C /* Configurations */,
+				AF7E15F1158B277600D04D4C /* Connections */,
+				AF7E15D3158B1B4900D04D4C /* CoreDataTemplates */,
 				AF81CE3D158A05A90078BFC3 /* Supporting Files */,
 			);
 			path = HKApp;
@@ -350,13 +396,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AF24F026158A2D3F006551AC /* RestKitResources.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitResources.bundle;
-			remoteRef = AF24F025158A2D3F006551AC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		AF334E7F158A2B32005028DA /* libStorageRoomKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -414,8 +453,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF81CE41158A05A90078BFC3 /* InfoPlist.strings in Resources */,
-				AF81CE53158A05A90078BFC3 /* HKAppMasterViewController.xib in Resources */,
-				AF81CE56158A05A90078BFC3 /* HKAppDetailViewController.xib in Resources */,
 				AFC3C396158A1E360086C8CC /* LICENSE in Resources */,
 				AFC3C397158A1E360086C8CC /* README.md in Resources */,
 			);
@@ -430,13 +467,15 @@
 			files = (
 				AF81CE43158A05A90078BFC3 /* main.m in Sources */,
 				AF81CE47158A05A90078BFC3 /* HKAppAppDelegate.m in Sources */,
-				AF81CE4A158A05A90078BFC3 /* HKApp.xcdatamodeld in Sources */,
-				AF81CE4D158A05A90078BFC3 /* HKAppMasterViewController.m in Sources */,
-				AF81CE50158A05A90078BFC3 /* HKAppDetailViewController.m in Sources */,
 				AFC3C398158A1E360086C8CC /* SDImageCache.m in Sources */,
 				AFC3C399158A1E360086C8CC /* SDWebImageDownloader.m in Sources */,
 				AFC3C39A158A1E360086C8CC /* SDWebImageManager.m in Sources */,
 				AFC3C39B158A1E360086C8CC /* UIImageView+WebCache.m in Sources */,
+				AF7E15DA158B1B4900D04D4C /* HKApp.xcdatamodeld in Sources */,
+				AF7E15DB158B1B4900D04D4C /* HKAppDetailViewController.m in Sources */,
+				AF7E15DC158B1B4900D04D4C /* HKAppMasterViewController.m in Sources */,
+				AF7E15F4158B277600D04D4C /* HKAppConstants.m in Sources */,
+				AF7E15F5158B277600D04D4C /* HKAppDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,22 +501,6 @@
 				AF81CE40158A05A90078BFC3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AF81CE51158A05A90078BFC3 /* HKAppMasterViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF81CE52158A05A90078BFC3 /* en */,
-			);
-			name = HKAppMasterViewController.xib;
-			sourceTree = "<group>";
-		};
-		AF81CE54158A05A90078BFC3 /* HKAppDetailViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF81CE55158A05A90078BFC3 /* en */,
-			);
-			name = HKAppDetailViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -592,12 +615,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AF81CE48158A05A90078BFC3 /* HKApp.xcdatamodeld */ = {
+		AF7E15D4158B1B4900D04D4C /* HKApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AF81CE49158A05A90078BFC3 /* HKApp.xcdatamodel */,
+				AF7E15D5158B1B4900D04D4C /* HKApp.xcdatamodel */,
 			);
-			currentVersion = AF81CE49158A05A90078BFC3 /* HKApp.xcdatamodel */;
+			currentVersion = AF7E15D5158B1B4900D04D4C /* HKApp.xcdatamodel */;
 			path = HKApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
