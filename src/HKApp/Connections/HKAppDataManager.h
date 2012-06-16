@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "HKAppDataRequestDelegate.h"
 
-@interface HKAppDataManager : NSObject <RKObjectLoaderDelegate>
+@interface HKAppDataManager : NSObject
 
 
 
 +(HKAppDataManager*) sharedManager;
 
-// Methods
 
-- (void)requestAllAttractionsWithDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
+// Get and save more attractions for count number
+- (void)updateAttractionsForCount:(int)count WithDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 - (void)requestSpotsForAttractionID:(NSString*)identifier withDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 - (void)requestMapForAttractionID:(NSString*)identifier withDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 

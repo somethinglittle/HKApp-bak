@@ -41,6 +41,11 @@ static HKAppDataManager* _sharedInstance;
 
 #pragma mark Request By Attraction
 
+- (void)updateAttractionsForCount:(int)count WithDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
+{
+  
+}
+
 - (void)requestSpotsForAttractionID:(NSString*)identifier withDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 {
   
@@ -48,12 +53,6 @@ static HKAppDataManager* _sharedInstance;
 
 
 - (void)requestMapForAttractionID:(NSString*)identifier withDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
-{
-  
-}
-
-
-- (void)requestAllAttractionsWithDelegate:(id<HKAppRequestByAttractionDelegate>)delegate;
 {
   
 }
