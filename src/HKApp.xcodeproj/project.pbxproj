@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1B803A8158E0961005E9023 /* IMG_9212.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1B803A7158E0961005E9023 /* IMG_9212.jpg */; };
+		A1B803AB158E1238005E9023 /* IMG_9091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1B803A9158E1238005E9023 /* IMG_9091.jpg */; };
+		A1B803AC158E1238005E9023 /* IMG_9560.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1B803AA158E1238005E9023 /* IMG_9560.jpg */; };
+		A1E150A3158DC7A100F53AC6 /* featuredTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E150A2158DC7A100F53AC6 /* featuredTableCell.xib */; };
+		A1E150A5158DC7D200F53AC6 /* normalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E150A4158DC7D200F53AC6 /* normalTableCell.xib */; };
+		A1E150A8158DCE2B00F53AC6 /* IMG_9395.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1E150A7158DCE2B00F53AC6 /* IMG_9395.jpg */; };
 		AF26C8F3158CD3AB0019486D /* HKAppDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF26C8F1158CD3AB0019486D /* HKAppDetailViewController.xib */; };
 		AF26C8F4158CD3AB0019486D /* HKAppMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF26C8F2158CD3AB0019486D /* HKAppMasterViewController.xib */; };
-		AF334E86158A2B77005028DA /* libStorageRoomKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF334E7F158A2B32005028DA /* libStorageRoomKit.a */; };
-		AF334EC4158A2D24005028DA /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF334EBB158A2D1C005028DA /* libRestKit.a */; };
+		AF334E86158A2B77005028DA /* libStorageRoomKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF334E7F158A2B32005028DA /* libStorageRoomKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		AF334EC4158A2D24005028DA /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF334EBB158A2D1C005028DA /* libRestKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		AF7E15DA158B1B4900D04D4C /* HKApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15D4158B1B4900D04D4C /* HKApp.xcdatamodeld */; };
 		AF7E15DB158B1B4900D04D4C /* HKAppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15D7158B1B4900D04D4C /* HKAppDetailViewController.m */; };
 		AF7E15DC158B1B4900D04D4C /* HKAppMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E15D9158B1B4900D04D4C /* HKAppMasterViewController.m */; };
@@ -104,6 +110,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1B803A7158E0961005E9023 /* IMG_9212.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9212.jpg; sourceTree = "<group>"; };
+		A1B803A9158E1238005E9023 /* IMG_9091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9091.jpg; sourceTree = "<group>"; };
+		A1B803AA158E1238005E9023 /* IMG_9560.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9560.jpg; sourceTree = "<group>"; };
+		A1E150A2158DC7A100F53AC6 /* featuredTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = featuredTableCell.xib; sourceTree = "<group>"; };
+		A1E150A4158DC7D200F53AC6 /* normalTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = normalTableCell.xib; sourceTree = "<group>"; };
+		A1E150A7158DCE2B00F53AC6 /* IMG_9395.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9395.jpg; sourceTree = "<group>"; };
 		AF26C8F1158CD3AB0019486D /* HKAppDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HKAppDetailViewController.xib; sourceTree = "<group>"; };
 		AF26C8F2158CD3AB0019486D /* HKAppMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HKAppMasterViewController.xib; sourceTree = "<group>"; };
 		AF334E74158A2B32005028DA /* StorageRoomKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StorageRoomKit.xcodeproj; path = Vendors/StorageRoomKit/StorageRoomKit.xcodeproj; sourceTree = "<group>"; };
@@ -174,6 +186,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1E1509F158DC66500F53AC6 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				A1E150A2158DC7A100F53AC6 /* featuredTableCell.xib */,
+				A1E150A4158DC7D200F53AC6 /* normalTableCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		A1E150A6158DCE2B00F53AC6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A1B803A9158E1238005E9023 /* IMG_9091.jpg */,
+				A1B803AA158E1238005E9023 /* IMG_9560.jpg */,
+				A1B803A7158E0961005E9023 /* IMG_9212.jpg */,
+				A1E150A7158DCE2B00F53AC6 /* IMG_9395.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		AF334E75158A2B32005028DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +322,8 @@
 		AF81CE3C158A05A90078BFC3 /* HKApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1E150A6158DCE2B00F53AC6 /* Resource */,
+				A1E1509F158DC66500F53AC6 /* xib */,
 				AF81CE45158A05A90078BFC3 /* HKAppAppDelegate.h */,
 				AF81CE46158A05A90078BFC3 /* HKAppAppDelegate.m */,
 				AF7E15EB158B277600D04D4C /* Configurations */,
@@ -463,6 +497,12 @@
 				AFC3C397158A1E360086C8CC /* README.md in Resources */,
 				AF26C8F3158CD3AB0019486D /* HKAppDetailViewController.xib in Resources */,
 				AF26C8F4158CD3AB0019486D /* HKAppMasterViewController.xib in Resources */,
+				A1E150A3158DC7A100F53AC6 /* featuredTableCell.xib in Resources */,
+				A1E150A5158DC7D200F53AC6 /* normalTableCell.xib in Resources */,
+				A1E150A8158DCE2B00F53AC6 /* IMG_9395.jpg in Resources */,
+				A1B803A8158E0961005E9023 /* IMG_9212.jpg in Resources */,
+				A1B803AB158E1238005E9023 /* IMG_9091.jpg in Resources */,
+				A1B803AC158E1238005E9023 /* IMG_9560.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +604,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HKApp/HKApp-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SOURCE_ROOT)/Vendors/RestKit/Build\"",
 					"\"$(SOURCE_ROOT)/Vendors/StorageRoomKit/Build\"",
@@ -584,6 +625,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HKApp/HKApp-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SOURCE_ROOT)/Vendors/RestKit/Build\"",
 					"\"$(SOURCE_ROOT)/Vendors/StorageRoomKit/Build\"",

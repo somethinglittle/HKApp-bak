@@ -26,6 +26,7 @@
   HKAppMasterViewController *masterViewController = [[HKAppMasterViewController alloc] initWithNibName:@"HKAppMasterViewController" bundle:nil];
   self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
   masterViewController.managedObjectContext = self.managedObjectContext;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
   self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;

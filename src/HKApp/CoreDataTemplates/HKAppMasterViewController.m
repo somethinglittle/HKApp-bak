@@ -10,6 +10,7 @@
 
 #import "HKAppDetailViewController.h"
 
+
 @interface HKAppMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -24,19 +25,19 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-    self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = NSLocalizedString(@"Master", @"Master");
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-  self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-  self.navigationItem.rightBarButtonItem = addButton;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)viewDidUnload
@@ -47,7 +48,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 - (void)insertNewObject:(id)sender
@@ -63,8 +64,8 @@
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
-         // Replace this implementation with code to handle the error appropriately.
-         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -74,27 +75,58 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return [[self.fetchedResultsController sections] count];
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-  return [sectionInfo numberOfObjects];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row + 1 <= [self getNumberOfFeaturedCell]){
+        return 160.0f;
+    }
+    else {
+        return 85.0f;
+    }
+    return 0.0f;
+}
+
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //static NSString *CellIdentifier = @"Cell";
+    if (indexPath.row + 1 <=  [self getNumberOfFeaturedCell]){
+        cell = [tableView dequeueReusableCellWithIdentifier:@"featuredTableCell"];
     }
-
-  [self configureCell:cell atIndexPath:indexPath];
+    else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"normalTableCell"];
+    }
+    
+    
+    if (cell == nil) {
+        
+        // cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]; 
+        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        NSArray *topLevelObjects;
+        
+        if (indexPath.row + 1 <=  [self getNumberOfFeaturedCell]){
+            topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"featuredTableCell" owner:self options:nil];
+        }
+        else {
+            topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"normalTableCell" owner:self options:nil];
+        }
+        NSLog(@"%@", topLevelObjects);
+        cell = [topLevelObjects objectAtIndex:0];
+        
+    }
+    
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
@@ -112,8 +144,8 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -166,8 +198,8 @@
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
@@ -226,19 +258,62 @@
 }
 
 /*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
+ // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
  
  - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    // In the simplest, most efficient, case, reload the table view.
-    [self.tableView reloadData];
-}
+ {
+ // In the simplest, most efficient, case, reload the table view.
+ [self.tableView reloadData];
+ }
  */
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    /*
+     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+     cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+     */
+    if (indexPath.row + 1 <= [self getNumberOfFeaturedCell]){
+        UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+        UILabel *titleLbl = (UILabel *)[cell viewWithTag:2];
+        UILabel *locationLbl = (UILabel *)[cell viewWithTag:3];
+        
+        if (indexPath.row % 2 == 0){
+            imageView.image = [UIImage imageNamed:@"IMG_9212.jpg"];
+            titleLbl.text = @"歎有機農家菜";
+            locationLbl.text = @"敬輝農場";
+        }
+    }
+    else {
+        UIButton *cell1_Btn = (UIButton *)[cell viewWithTag:1];
+        UILabel *cell1_Lbl = (UILabel *)[cell viewWithTag:2];
+        
+        cell1_Btn.imageView.image = [UIImage imageNamed:@"IMG_9091.jpg"];
+        [cell1_Btn addTarget:self action:@selector(cellOnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+        
+        cell1_Lbl.text = @"環球片場";
+        
+        
+        UIButton *cell2_Btn = (UIButton *)[cell viewWithTag:3];
+        UILabel *cell2_Lbl = (UILabel *)[cell viewWithTag:4];
+        cell2_Btn.imageView.image = [UIImage imageNamed:@"IMG_9560.jpg"];
+        [cell2_Btn addTarget:self action:@selector(cellOnClick) forControlEvents:UIControlEventTouchUpInside];
+
+        cell2_Lbl.text = @"死肥仔";
+
+
+    }
+
 }
+
+- (void)cellOnClick{
+    NSLog(@"cell onClick");
+}
+
+- (int)getNumberOfFeaturedCell{
+    return 2;
+}
+
 
 @end
